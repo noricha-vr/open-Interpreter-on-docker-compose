@@ -3,6 +3,7 @@
 ## Setup
 
 ```bash
-docker-compose up
+docker compose build
+docker compose up
 docker exec -it open-interpreter bash
 ```

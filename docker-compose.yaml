@@ -4,6 +4,8 @@ services:
   open-interpreter:
     build: .
     container_name: open-interpreter
+    env_file:
+      - .env
     volumes:
       - .:/workspace
     command: tail -f /dev/null
