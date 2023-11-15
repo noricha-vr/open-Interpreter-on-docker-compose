@@ -6,31 +6,38 @@ This project is designed to run a potentially dangerous Open Interpreter safely 
 
 ## Setup
 
-1. **Create Environment File**: Create a `.env` file based on the `.env-example`.
+1. **Git Clone**: Use the following command to clone this repository.
 
-2. **Build and Start Containers**: Use the following commands to build the Docker image and start the containers. Then, enter the container.
+```bash 
+git clone git@github.com:noricha-vr/open-Interpreter-on-docker-compose.git
+cd open-Interpreter-on-docker-compose
+```
 
-    ```bash
-    docker compose build
-    docker compose up
-    docker exec -it open-interpreter bash
-    ```
+2. **Create Environment File**: Create a `.env` file based on the `.env-example`.
 
-3. **Start Python Interpreter**: Inside the container, start the Python interpreter and execute the following commands.
+3. **Build and Start Containers**: Use the following commands to build the Docker image and start the containers. Then, enter the container.
 
-    ```python
-    import os
-    import interpreter
+ ```bash
+ docker compose build
+ docker compose up -d
+ docker exec -it open-interpreter bash
+ ```
 
-    interpreter.api_key = os.environ['OPENAI_API_KEY']
-    interpreter.auto_run = True
-    interpreter.chat("Please print hello world.")
-    ```
+4. **Start Python Interpreter**: Inside the container, start the Python interpreter and execute the following commands.
 
-4. **Continue the Conversation**: To continue the conversation, execute the following command.
+ ```python
+ import os
+ import interpreter
 
-    ```python
-    interpreter.chat("Do something.")
-    ```
+ interpreter.api_key = os.environ['OPENAI_API_KEY']
+ interpreter.auto_run = True
+ interpreter.chat("Please print hello world.")
+ ```
+
+5. **Continue the Conversation**: To continue the conversation, execute the following command.
+
+ ```python
+ interpreter.chat("Do something.")
+ ```
 
 Enjoy a safe Open Interpreter experience!

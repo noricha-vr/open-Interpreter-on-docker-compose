@@ -4,7 +4,8 @@ FROM python:3.11
 WORKDIR /workspace
 
 # 必要なPythonモジュールをインストール
-RUN pip install open-interpreter==0.1.15
+COPY requirements.txt /workspace
+RUN pip install -r requirements.txt
 
 # 現在のディレクトリの内容をコンテナの作業ディレクトリにコピー
 COPY . /workspace

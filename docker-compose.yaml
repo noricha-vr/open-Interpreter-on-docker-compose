@@ -8,4 +8,4 @@ services:
       - .env
     volumes:
       - .:/workspace
-    command: tail -f /dev/null
+    command: /bin/bash -c "echo 'Container is running...'; tail -f /dev/null"

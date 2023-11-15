@@ -4,18 +4,24 @@
 
 [English version README is here]( README.md)
 ## セットアップ
+1**Gitリポジトリのクローン**: 次のコマンドを使用して、このリポジトリをクローンします。
 
-1. **環境設定ファイルの作成**: `.env-example`を参考にして、`.env`ファイルを作成します。
+```bash 
+git clone git@github.com:noricha-vr/open-Interpreter-on-docker-compose.git
+cd open-Interpreter-on-docker-compose
+```
 
-2. **ビルドとコンテナの起動**: 次のコマンドを使用してDockerイメージをビルドし、コンテナを起動します。その後、コンテナに入ります。
+2**環境設定ファイルの作成**: `.env-example`を参考にして、`.env`ファイルを作成します。
+
+3**ビルドとコンテナの起動**: 次のコマンドを使用してDockerイメージをビルドし、コンテナを起動します。その後、コンテナに入ります。
 
     ```bash
     docker compose build
-    docker compose up
+    docker compose up -d
     docker exec -it open-interpreter bash
     ```
 
-3. **Pythonインタープリタの起動**: コンテナ内でPythonインタープリタを起動し、以下のコマンドを実行します。
+4**Pythonインタープリタの起動**: コンテナ内でPythonインタープリタを起動し、以下のコマンドを実行します。
 
     ```python
     import os
@@ -26,7 +32,7 @@
     interpreter.chat("Please print hello world.")
     ```
 
-4. **会話の継続**: 会話を続けるには、以下のコマンドを実行します。
+5**会話の継続**: 会話を続けるには、以下のコマンドを実行します。
 
     ```python
     interpreter.chat("Do something.")
