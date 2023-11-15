@@ -1,12 +1,12 @@
-# Open Interpreter on docker compose
+# Open Interpreter on Docker Compose
 
-このプロジェクトはローカル環境で実行すると危険なOpen InterpreterをDocker Composeを使用して安全に実行するプロジェクトです。
+This project is designed to run a potentially dangerous Open Interpreter safely using Docker Compose in a local environment.
 
-## セットアップ
+## Setup
 
-1. **環境設定ファイルの作成**: `.env-example`を参考にして、`.env`ファイルを作成します。
+1. **Create Environment File**: Create a `.env` file based on the `.env-example`.
 
-2. **ビルドとコンテナの起動**: 次のコマンドを使用してDockerイメージをビルドし、コンテナを起動します。その後、コンテナに入ります。
+2. **Build and Start Containers**: Use the following commands to build the Docker image and start the containers. Then, enter the container.
 
     ```bash
     docker compose build
@@ -14,7 +14,7 @@
     docker exec -it open-interpreter bash
     ```
 
-3. **Pythonインタープリタの起動**: コンテナ内でPythonインタープリタを起動し、以下のコマンドを実行します。
+3. **Start Python Interpreter**: Inside the container, start the Python interpreter and execute the following commands.
 
     ```python
     import os
@@ -25,10 +25,10 @@
     interpreter.chat("Please print hello world.")
     ```
 
-4. **会話の継続**: 会話を続けるには、以下のコマンドを実行します。
+4. **Continue the Conversation**: To continue the conversation, execute the following command.
 
     ```python
     interpreter.chat("Do something.")
     ```
 
-安全なOpen Interpreterライフを！
+Enjoy a safe Open Interpreter experience!
