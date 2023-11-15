@@ -2,6 +2,7 @@
 
 このプロジェクトはローカル環境で実行すると危険なOpen InterpreterをDocker Composeを使用して安全に実行するプロジェクトです。
 
+[English version README is here]( README.md)
 ## セットアップ
 
 1. **環境設定ファイルの作成**: `.env-example`を参考にして、`.env`ファイルを作成します。

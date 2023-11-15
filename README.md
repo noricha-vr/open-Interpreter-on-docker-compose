@@ -2,6 +2,8 @@
 
 This project is designed to run a potentially dangerous Open Interpreter safely using Docker Compose in a local environment.
 
+[日本語版READMEはこちら]( README_JA.md)
+
 ## Setup
 
 1. **Create Environment File**: Create a `.env` file based on the `.env-example`.
